@@ -1,4 +1,4 @@
-package com.sankuai.oa;
+package com.sankuai.oa.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

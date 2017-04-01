@@ -1,4 +1,4 @@
-package com.sankuai.oa;
+package com.sankuai.oa.demo.domain;
 
 public class Greeting {
 
