@@ -1,7 +1,9 @@
 spring:
   datasource:
     druid:
+      type: com.alibaba.druid.pool.DruidDataSource
       url: ${MYSQL_JDBC_URL}
       username: ${MYSQL_USERNAME}
       password: ${MYSQL_PASSOWRD}
       driver-class-name: com.mysql.jdbc.Driver
+      initialSize: 1
