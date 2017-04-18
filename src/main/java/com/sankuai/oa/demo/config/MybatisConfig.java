@@ -9,6 +9,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -18,6 +19,7 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import javax.sql.DataSource;
 import java.util.Properties;
 
+@Configuration
 public class MybatisConfig implements TransactionManagementConfigurer {
     @Autowired
     DataSource dataSource;
@@ -26,7 +28,7 @@ public class MybatisConfig implements TransactionManagementConfigurer {
     public SqlSessionFactory sqlSessionFactoryBean() {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setTypeAliasesPackage("com.cn.model");
+        bean.setTypeAliasesPackage("com.sankuai.oa.demo.mapper.domain");
 
         // 分页插件
         PageInterceptor pageInterceptor = new PageInterceptor();
@@ -41,8 +43,8 @@ public class MybatisConfig implements TransactionManagementConfigurer {
         // 添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver
-                    .getResources("classpath:mapper/*.xml"));
+            // bean.setMapperLocations(resolver
+            //         .getResources("classpath:mapper/*.xml"));
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();
