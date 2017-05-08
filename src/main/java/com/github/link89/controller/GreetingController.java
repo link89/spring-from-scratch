@@ -1,8 +1,8 @@
-package com.sankuai.oa.demo.controller;
+package com.github.link89.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.sankuai.oa.demo.domain.Greeting;
+import com.github.link89.domain.Greeting;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.sankuai.oa.demo.config;
+package com.github.link89.config;
 
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

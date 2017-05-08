@@ -1,4 +1,4 @@
-package com.sankuai.oa.demo.config;
+package com.github.link89.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;

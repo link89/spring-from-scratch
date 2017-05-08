@@ -1,6 +1,6 @@
-package com.sankuai.oa.demo.mapper;
+package com.github.link89.mapper;
 
-import com.sankuai.oa.demo.domain.User;
+import com.github.link89.domain.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

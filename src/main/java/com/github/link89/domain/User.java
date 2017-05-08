@@ -1,4 +1,4 @@
-package com.sankuai.oa.demo.domain;
+package com.github.link89.domain;
 
 public class User {
     private Long id;

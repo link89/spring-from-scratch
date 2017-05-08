@@ -1,6 +1,6 @@
-import com.sankuai.oa.demo.Application;
-import com.sankuai.oa.demo.domain.User;
-import com.sankuai.oa.demo.mapper.UserMapper;
+import com.github.link89.Application;
+import com.github.link89.domain.User;
+import com.github.link89.mapper.UserMapper;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
