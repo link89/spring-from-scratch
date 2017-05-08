@@ -28,7 +28,7 @@ public class MybatisConfig implements TransactionManagementConfigurer {
     public SqlSessionFactory sqlSessionFactoryBean() {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setTypeAliasesPackage("com.sankuai.oa.demo.mapper.domain");
+        bean.setTypeAliasesPackage("com.github.link89.mapper.domain");
 
         // 分页插件
         PageInterceptor pageInterceptor = new PageInterceptor();

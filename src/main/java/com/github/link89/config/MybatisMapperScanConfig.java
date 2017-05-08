@@ -11,7 +11,7 @@ public class MybatisMapperScanConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("com.sankuai.oa.demo.mapper");
+        mapperScannerConfigurer.setBasePackage("com.github.link89.mapper");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         return mapperScannerConfigurer;
     }
