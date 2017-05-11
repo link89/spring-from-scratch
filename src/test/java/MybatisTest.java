@@ -33,5 +33,7 @@ public class MybatisTest{
 
         Assert.assertFalse(CollectionUtils.isEmpty(users));
         Assert.assertEquals(user.getAge(), users.get(0).getAge());
+
+
     }
 }
