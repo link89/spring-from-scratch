@@ -28,7 +28,7 @@ public class MybatisConfig implements TransactionManagementConfigurer {
     public SqlSessionFactory sqlSessionFactoryBean() {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setTypeAliasesPackage("com.github.link89.mapper.domain");
+        bean.setTypeAliasesPackage("com.github.link89.domain");
 
         // 分页插件
         PageInterceptor pageInterceptor = new PageInterceptor();
@@ -43,8 +43,8 @@ public class MybatisConfig implements TransactionManagementConfigurer {
         // 添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            // bean.setMapperLocations(resolver
-            //         .getResources("classpath:mapper/*.xml"));
+            bean.setMapperLocations(resolver
+                    .getResources("classpath:mapper/*.xml"));
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();
