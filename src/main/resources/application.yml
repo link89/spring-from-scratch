@@ -6,3 +6,6 @@ spring:
       password: ${MYSQL_PASSWORD}
       driverClassName: com.mysql.jdbc.Driver
       initialSize: 1
+
+logging:
+  config: classpath:log4j2.xml

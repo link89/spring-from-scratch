@@ -3,6 +3,7 @@ package com.github.link89.config;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInterceptor;
+import org.apache.ibatis.logging.log4j2.Log4j2Impl;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -29,6 +30,10 @@ public class MybatisConfig implements TransactionManagementConfigurer {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         bean.setTypeAliasesPackage("com.github.link89.domain");
+
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        configuration.setLogImpl(Log4j2Impl.class);
+        bean.setConfiguration(configuration);
 
         // 分页插件
         PageInterceptor pageInterceptor = new PageInterceptor();
